@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const ItemPreview = (props) => {
   const item = props.item;
-  imgSrc = item.image;
+  const imgSrc = item.image;
   if (imgSrc === "") {
     imgSrc = "Anythink-Market-dm3h2/frontend/public/placeholder.png";
   }
