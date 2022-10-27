@@ -88,7 +88,7 @@ class ItemsQueriesMixin:
         description: str,
         body: str,
         seller_username: str,
-        image: str
+        image: Optional[str] = "Anythink-Market-dm3h2/frontend/public/placeholder.png",
     ) -> Record: ...
     async def add_tags_to_item(
         self, conn: Connection, tags_slugs: Sequence[Dict[str, str]]
