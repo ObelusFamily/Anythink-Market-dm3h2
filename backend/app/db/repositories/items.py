@@ -1,4 +1,3 @@
-from logging import PlaceHolder
 from typing import List, Optional, Sequence, Union
 
 from asyncpg import Connection, Record
