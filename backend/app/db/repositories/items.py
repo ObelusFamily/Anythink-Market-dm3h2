@@ -21,7 +21,6 @@ from app.models.domain.users import User
 
 SELLER_USERNAME_ALIAS = "seller_username"
 SLUG_ALIAS = "slug"
-DEFAULT_PLACEHOLDER_IMG = "Anythink-Market-dm3h2\frontend\public\placeholder.png"
 
 CAMEL_OR_SNAKE_CASE_TO_WORDS = r"^[a-z\d_\-]+|[A-Z\d_\-][^A-Z\d_\-]*"
 
@@ -40,7 +39,7 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
         description: str,
         seller: User,
         body: Optional[str] = None,
-        image: Optional[str] = DEFAULT_PLACEHOLDER_IMG,
+        image: Optional[str] = None,
         tags: Optional[Sequence[str]] = None,
     ) -> Item:
         async with self.connection.transaction():
