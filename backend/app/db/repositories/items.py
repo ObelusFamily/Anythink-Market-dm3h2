@@ -22,7 +22,7 @@ from app.models.domain.users import User
 
 SELLER_USERNAME_ALIAS = "seller_username"
 SLUG_ALIAS = "slug"
-DEFAULT_PLACEHOLDER_IMG = ".\frontend\public\placeholder.png"
+DEFAULT_PLACEHOLDER_IMG = "Anythink-Market-dm3h2\frontend\public\placeholder.png"
 
 CAMEL_OR_SNAKE_CASE_TO_WORDS = r"^[a-z\d_\-]+|[A-Z\d_\-][^A-Z\d_\-]*"
 
