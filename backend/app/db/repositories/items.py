@@ -24,6 +24,8 @@ SLUG_ALIAS = "slug"
 
 CAMEL_OR_SNAKE_CASE_TO_WORDS = r"^[a-z\d_\-]+|[A-Z\d_\-][^A-Z\d_\-]*"
 
+IMG_PLACEHOLDER = "Anythink-Market-dm3h2/frontend/public/placeholder.png";
+
 
 class ItemsRepository(BaseRepository):  # noqa: WPS214
     def __init__(self, conn: Connection) -> None:
@@ -39,7 +41,7 @@ class ItemsRepository(BaseRepository):  # noqa: WPS214
         description: str,
         seller: User,
         body: Optional[str] = None,
-        image: Optional[str] = None,
+        image: IMG_PLACEHOLDER,
         tags: Optional[Sequence[str]] = None,
     ) -> Item:
         async with self.connection.transaction():
