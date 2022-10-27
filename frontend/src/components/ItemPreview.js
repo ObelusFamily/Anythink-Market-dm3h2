@@ -19,6 +19,10 @@ const mapDispatchToProps = (dispatch) => ({
 
 const ItemPreview = (props) => {
   const item = props.item;
+  let imgSrc = item.image;
+  if (imgSrc === undefined) {
+    imgSrc = "Anythink-Market-dm3h2/frontend/public/placeholder.png";
+  }
 
   const handleClick = (ev) => {
     ev.preventDefault();
@@ -36,7 +40,7 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-        src={item.image}
+        src={imgSrc}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
